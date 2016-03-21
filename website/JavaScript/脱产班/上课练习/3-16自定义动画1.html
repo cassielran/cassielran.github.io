@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animate</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		ul{
+			height: 40px;
+			overflow: hidden;		
+		}
+		li{
+			float: left;
+			cursor:pointer;
+			list-style: none;
+			width: 60px;
+			height: 80px;
+			/*border:1px solid #f00;	*/
+		}
+		a,span{
+			display: block;
+			width: 60px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+		}
+		span{
+			background-color: #3ff;
+		}
+		a{
+			background-color: #f3f;
+			text-decoration: none;
+		}
+	
+	</style>
+</head>
+<body>
+	<ul class="l-list">
+		<li>
+			<span>游戏</span>
+			<a href="#">游戏</a>
+		</li>
+		<li>
+			<span>角色</span>
+			<a href="#">角色</a>
+		</li>
+		<li>
+			<span>武器</span>
+			<a href="#">武器</a>
+		</li>
+	</ul>
+
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$(".l-list li").mouseenter(function(){
+			$(this).stop().animate({"margin-top":-40},3000)
+		}).mouseleave(function(){
+			$(this).stop().animate({"margin-top":"0px"},3000)
+		})
+
+	</script>
+</body>
+</html>

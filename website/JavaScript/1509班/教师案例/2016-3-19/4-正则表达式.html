@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		//中括号：范围
+		//小括号：分组
+		//大括号：位数
+		// \d 匹配数字  \D 匹配非数字
+		// \w 匹配数字字母下划线
+		// \s 匹配空格或tab
+
+
+
+
+		//var re = /^([0-9]{11})([a-z]{5,10})$/;
+
+		var re = /^(\d{4})\-([0-9]{1,2})\-([0-9]{1,2})$/
+
+		var str = "2016-3-19";
+		var result = re.exec(str);
+		var str = "今天是" + result[1] + "年," + result[2] + "月," + result[3] + "日";
+		console.log(str);
+
+
+
+
+
+	</script>
+</body>
+</html>

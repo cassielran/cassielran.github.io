@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul li
+		{
+			list-style: none;
+			float:left;
+			width: 60px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			border:1px solid #000;
+			background-color: #eee;	
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<div class="list1"></div>
+		</li>
+		<li class="list">类别</li>
+		<li class="list">大小</li>
+	</ul>
+	
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(.list).click(function(){
+			var index = $(this).index;
+
+		})
+	</script>	
+</body>
+</html>

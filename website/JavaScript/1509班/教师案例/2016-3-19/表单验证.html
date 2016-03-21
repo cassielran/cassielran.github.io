@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.true{
+			color:green;
+		}
+		.false{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+
+	<input id="txt" type="text"><span id="info"></span>
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+		$("#txt").blur(function(){
+
+			var re = /^\w{5,10}\@qq\.[a-zA-Z]{2,3}$/;
+			var result = re.test($(this).val());
+			if(result){
+				$("#info").text("正确").removeClass().addClass("true");
+			}else{
+				$("#info").text("失败").removeClass().addClass("false");
+			}
+
+		})
+
+	</script>
+</body>
+</html>

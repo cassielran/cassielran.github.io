@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证</title>
+	<style>
+		.span1{
+			color:red;
+			display:none;
+		}
+		.span2{
+			color:green;
+			display:none;
+		}
+		.true{
+			color:green;
+		}
+		.false{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- 姓名：<input type="text" class="txt name"><br><br> -->
+	<!-- 性别：<input type="text" class="txt sex"><br><br> -->
+	年龄：<input type="text" class="txt age"><span id="age"></span><br>
+	
+	出生日期：<input type="text" class="txt date">
+	<span class="span1">请输入正确内容</span>
+	<span class="span2">输入正确</span>
+	<!-- 手机号码：<input type="text" class="txt call"><br><br> -->
+	<!-- 邮箱：<input type="text" class="txt email"><br><br> -->
+	<input type="button" class="btn" value="提交"><br><br>
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		// var name = /[^\u4E00-\u9FA5]+/;
+		// var sex = / /;
+		var age = /^[0-9]+$/;
+		var date = /^([0-9]{4})\-([0-9]{1,2})\-([0-9]{1,2})$/;
+		// var call = /^[0-9]{11}$/;
+		// var email = /^[0-9a-zA-Z@.]/;
+		$(".btn").click(function(){
+			// var reName=$(".name").val();
+			// var reSex=$(".sex").val();
+			// var reAge=$(".age").val();			
+			var reDate=$(".date").val();
+			// var reCall=$(".call").val();		
+			// var reEmail=$(".email").val();
+			// if(!age.test(reAge)){
+			// 	$("#age").text("正确").removeClass().addClass("true");
+			// }else{
+			// 	$("#age")..text("失败").removeClass().addClass("false");
+			// }
+			if(!date.test(reDate)){
+				$(".span1").css("display","block");
+				$(".span2").css("display","none");
+			}else{
+				$(".span2").css("display","block");
+				$(".span1").css("display","none")
+			}
+		})
+		$(".age").blur(function(){//失去焦点
+			var reAge=$(".age").val();
+			//var result = reAge.test($(this).val());
+			if(!age.test(reAge)){//if(result){}
+				$("#age").text("失败").removeClass().addClass("false");
+			}else{
+				$("#age").text("正确").removeClass().addClass("true");
+			}
+		})
+
+		
+
+
+	</script>
+</body>
+</html>

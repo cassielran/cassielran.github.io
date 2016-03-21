@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+
+		var obj = {};   //属性的无序集合
+
+		var cat = {
+			name:"旺财",
+			age:2,
+			eat:function(x){                  //方法
+				return x
+			},
+			sayName:function(){
+				console.log(this.name);
+			},
+			beat:function(){
+				console.log(this.eat())
+			}
+		};
+
+		cat.eat("鱼");
+
+		cat.beat();
+
+
+
+
+
+
+		// 鱼
+		// undefined
+		// 报错
+
+		// function outFun(){
+
+		// 	return function(){
+
+		// 		console.log("我是内部函数");
+
+		// 	}
+
+		// }
+
+
+
+
+
+		// var lee = {
+		// 	num1:0,
+		// 	num2:0,
+		// 	sign:"",
+		// 	f:function(){
+
+		// 	}
+		// }
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>增删</title>
+	<style>
+		li{
+			/*list-style: none;*/
+		}
+	</style>
+</head>
+<body>
+	<input id="txt" type="text" placeholder="请输入内容">
+	<input id="btn1" type="button" value="首部添加">
+	<input id="btn2" type="button" value="尾部添加">	
+	<input id="btn3" type="button" value="删除内容">
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+
+
+
+	<script src="../../scripyt/jquery-1.11.1.js"></script>
+	<script>
+		$("#btn1").click(function(){
+			var val = $("#txt").val();//把text的val赋值给定义的变量val
+			var li = "<li>" + val + "</li>";//获取变量val的值赋给变量li
+			$(".list").prepend(li);//将变量li首部添加到类为list的ul的列表下
+		})
+		$("#btn2").click(function(){
+			var val = $("#txt").val();
+			var li = "<li>" + val + "</li>"
+			$(".list").append(li);//将变量li尾部添加到类为list的ul的列表下
+		})
+		$("#btn3").click(function(){
+			$(".list").remove();//全部删除ul
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.view
+		{
+			margin: 0 auto;
+			width: 200px;
+			overflow: hidden;
+		}
+		.b-box
+		{	
+			position: relative;
+			width: 800px;
+			height: 100px;
+		}
+		.box
+		{
+			float: left;
+			position: relative;
+			width: 200px;
+			height: 100px;
+		}
+		.box1
+		{
+			background-color: #6ff;
+		}
+		.box2
+		{
+			background-color: #f6f;
+		}
+		.box3
+		{
+			background-color: #ff6;
+		}
+		.box4
+		{
+			background-color: #66f;
+		}
+		/*ul
+		{
+			margin: 0 auto;
+		}*/
+		li 
+		{
+			cursor: pointer;
+			list-style: none;
+			width: 20px;
+			height: 20px;
+			float: left;
+			border:1px solid #000;
+			text-align: center;
+			line-height: 20px;
+		}
+		.color
+		{
+			background-color: red;
+		}
+		img
+		{
+			width: 200px;
+			height: 100px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="view">
+		<div class="b-box">
+			<!-- 颜色块动画 -->
+			<!-- <div class="box box1"></div>
+			<div class="box box2"></div>
+			<div class="box box3"></div>
+			<div class="box box4"></div> -->
+			<!-- 图片动画轮播 -->
+			<div class="box"><img src="../../images/1.jpg" alt=""></div>
+			<div class="box"><img src="../../images/2.jpg" alt=""></div>
+			<div class="box"><img src="../../images/3.jpg" alt=""></div>
+			<div class="box"><img src="../../images/4.jpg" alt=""></div>
+		</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	
+
+
+	<script type="text/javascript" src="../../script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		// $(".b-box").animate({"margin-left":"-600px"},5000);
+		$("li").click(function(){
+			var index = $(this).index();
+			var marlt = index * -200;//有关颜色块的
+			$(".b-box").animate({"margin-left":marlt},300);//颜色块的
+			$(this).addClass("color");
+			$(this).siblings().removeClass("color")
+		})
+	</script>
+</body>
+</html>

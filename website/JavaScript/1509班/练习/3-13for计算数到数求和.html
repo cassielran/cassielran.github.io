@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数到数求和</title>
+</head>
+<body>
+	<input id="num1" type="text">到
+	<input id="num2" type="text">
+	<input id="btn" type="button" value="求和">
+	<input id="result" type="text">
+	
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("#btn").click(function(){
+			var num1 = Number($("#num1").val());
+			var num2 = Number($("#num2").val());
+			var result = 0;
+			for(var r = num1;r <= num2;r++){
+				result = result + r;
+				console.log(result)
+			}
+			$("#result").val(result);
+		})
+		
+	</script>
+</body>
+</html>

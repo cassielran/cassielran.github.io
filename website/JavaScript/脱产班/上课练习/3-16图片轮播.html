@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lunbo</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		.view{
+			width: 300px;
+			height: 200px;
+			overflow: hidden ;
+		}
+		.box{
+			width: 1200px;
+			height: 200px;
+		}
+		img{
+			float: left;
+			width: 300px;
+			height: 200px;
+		}
+		li{
+			float: left;
+			list-style: none;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			position:relative;
+			top:-30px;
+			background-color: #fff;
+			margin-right: 2px;
+			cursor:pointer;
+		}
+		.color{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="view">
+		<div class="box">
+			<img src="../images/1.jpg" alt="">
+			<img src="../images/2.jpg" alt="">
+			<img src="../images/3.jpg" alt="">
+			<img src="../images/4.jpg" alt="">		
+		</div>
+	</div>
+
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("li").click(function(){
+			var index = $(this).index();
+			var mov = index * -300;
+			$(".box").animate({"margin-left":mov},300);
+			$(this).addClass("color");
+			$(this).siblings().removeClass("color");
+		})
+	</script>
+</body>
+</html>

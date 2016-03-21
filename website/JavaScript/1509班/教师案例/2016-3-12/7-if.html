@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<input id="txt" type="text">
+	<input id="btn" type="button" value="测试">
+
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#btn").click(function(){
+			var val = Number($("#txt").val());
+			if(val>0 && val<10){
+				alert("0~10");
+			}else if(val >= 10 && val <= 20){
+				alert("10~20")
+			}
+			else if(val >= 20 && val <= 30){
+				alert("10~20")
+			}
+		})
+
+
+
+		// if(true){
+		// 	//执行
+		// }
+
+		// if(false){
+		// 	//不执行
+		// }else{
+		// 	//执行
+		// }
+
+		// if(false){
+		// 	//不执行
+		// }else if(false){
+		// 	//不执行
+		// }else if(false){
+		// 	//不执行
+		// }else if(false){
+		// 	//不执行
+		// }else if(false){
+		// 	//不执行
+		// }else if(ture){
+		// 	//执行
+		// }
+
+
+		// if(){
+
+		// }
+		// if(){
+
+		// }
+		// if(){
+
+		// }
+	</script>
+
+</body>
+</html>

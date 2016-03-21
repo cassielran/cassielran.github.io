@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img class="pic" src="../images/1.jpg" alt="">
+	<input type="button" id="btn" value="变换图片">
+
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#btn").click(function(){
+			$(".pic").attr("src","../images/2.jpg")
+		})
+	</script>
+</body>
+</html>

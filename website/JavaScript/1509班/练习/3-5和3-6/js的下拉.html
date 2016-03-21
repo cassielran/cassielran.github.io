@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin:0;}
+		.nav
+		{
+			float: left;
+			border:1px solid #000;
+			width: 60px;
+			height: 60px;
+			background-color: #ee6;
+			text-align: center;
+			line-height: 60px;
+		}
+		li
+		{
+			display: none;
+			list-style: none;
+			border:1px solid #000;
+			width: 60px;
+			height: 60px;
+			background-color: #ee0;
+			text-align: center;
+			line-height: 60px;
+		}
+		a
+		{
+			text-decoration: none;
+		}
+		.color
+		{
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<a href="#">语言</a>
+		<ul>
+			<li>中文</li>
+			<li>英文</li>
+			<li>俄文</li>
+		</ul>	
+	</div>
+	<div class="nav">
+		<a href="#">类别</a>
+		<ul>
+			<li>2</li>
+			<li>22</li>
+			<li>222</li>
+		</ul>
+	</div>
+	<div class="nav">
+		<a href="#">时间</a>
+		<ul>
+			<li>3</li>
+			<li>33</li>
+			<li>333</li>
+		</ul>
+	</div>
+
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("ul").hide();
+		$(".nav").mouseenter(function(){
+			
+			$(this).find("ul").stop().slideDown(500);
+			$(this).addClass("color");
+		})
+		// $(".nav").mouseout(function(){
+		// 	$(this).siblings().stop().slideUp(500)
+		// })
+
+
+	</script>
+</body>
+</html>

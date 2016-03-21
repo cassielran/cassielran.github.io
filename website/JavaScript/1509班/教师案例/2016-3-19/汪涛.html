@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<br>
+	<input type="button" class="btn num" value="1">
+	<input type="button" class="btn num" value="2">
+	<input type="button" class="btn num" value="3">
+	<input type="button" class="btn num" value="4">
+	<input type="button" class="btn num" value="5">
+	<input type="button" class="btn num" value="6">
+	<input type="button" class="btn num" value="7">
+	<input type="button" class="btn num" value="8">
+	<input type="button" class="btn num" value="9">
+	<input type="button" class="btn num" value="0">
+	<input type="button" class="btn point" value=".">
+	<br>
+	<input type="button" class="btn sign" value="+">
+	<input type="button" class="btn sign" value="-">
+	<input type="button" class="btn sign" value="*">
+	<input type="button" class="btn sign" value="\">
+	<input type="button" class="btn result" value="=">
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+			var num1 = "";
+			var num2 = "";
+			var result = "";
+			var sign = "";
+
+		$(".num").click(function(){
+
+			var val = $(this).val();
+
+			if(sign == ""){
+				num1 += val
+				$("#txt").val(num1)
+			}else{
+				num2 += val;
+				$("#txt").val(num2)
+			}
+
+		})
+
+		$(".sign").click(function(){
+			sign = $(this).val();
+		})
+
+
+	</script>
+</body>
+</html>

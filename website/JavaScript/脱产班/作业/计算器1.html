@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style>
+		*{
+			padding: 0;margin: 0;
+		}
+		.box{
+			margin:0 auto;
+			background-color: #dee;
+			width: 300px;
+			height: 400px;
+			border:;
+		}
+		input{
+			margin-top: 10px;
+			width: 280px;
+			height: 30px;
+		}
+		.num,.sign,.del1,.del2,.res{
+			margin-top: 20px;
+			margin-left: 10px;
+			width: 30px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input class="txt" type="text" value="0">		
+		<input type="button" class="num" value="1"/>
+		<input type="button" class="num" value="2"/>
+		<input type="button" class="num" value="3"/>
+		<input type="button" class="num" value="4"/>
+		<input type="button" class="num" value="5"/>
+		<input type="button" class="num" value="6"/>
+		<input type="button" class="num" value="7"/>
+		<input type="button" class="num" value="8"/>
+		<input type="button" class="num" value="9"/>
+		<input type="button" class="num" value="0"/>
+		<input type="button" class="num" value="."/><br>
+		<input type="button" class="sign" value="+"/>
+		<input type="button" class="sign" value="-"/>
+		<input type="button" class="sign" value="*"/> 
+		<input type="button" class="sign" value="/"/>
+		<input type="button" class="del1" value="C"/>
+		<input type="button" class="del2" value="←"/>
+		<input type="button" class="res" value="="/>
+	</div>
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		//定义初始值
+		var num1 = "";
+		var num2 = "";
+		var sign = "";
+		var result = "";
+
+
+		$(".num").click(function(){
+			var val = $(this).val();//把点击.num的值赋给变量val
+			if(sign == ""){//当sign等于空字符串时，执行
+				num1 = num1 + val;
+				$(".txt").val(num1);
+			}else{//当sign不为空值时  <------
+				num2 = num2 + val;    //     ^
+				$(".txt").val(num2);  //     |
+			}                         //     |
+		})                            //     | 
+		$(".sign").click(function(){  //     |
+			sign = $(this).val();     // ---->
+		})
+		$(".res").click(function(){
+			var number1 = Number(num1);
+			var number2 = Number(num2);
+			switch(sign){
+				case "+": result = number1 + number2; break;			
+				case "-": result = number1 - number2; break;			
+				case "*": result = number1 * number2; break;			
+				case "/": result = number1 / number2; break;			
+			}
+			$(".txt").val(result);				
+		})
+		$(".del1").click(function(){
+			num1 = "";
+			num2 = "";
+			sign = "";
+			$(".txt").val(0);
+		})
+		
+
+		
+	</script>
+</body>
+</html>

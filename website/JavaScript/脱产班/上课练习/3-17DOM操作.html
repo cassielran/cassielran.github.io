@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input id="txt" type="text">
+	<button id="btn1">首部添加节点</button>
+	<button id="btn2">尾部添加节点</button>
+	<button id="btn3">删除该节点</button>
+	<ul>
+		<li>1213</li>
+		<li>2222</li>
+		<li>3333</li>
+	</ul>
+
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("#btn1").click(function(){
+			var val = $("#txt").val();
+			var li = "<li>  " + val + " </li>";
+			$("ul").prepend(li);
+		})
+		$("#btn2").click(function(){
+			var val = $("#txt").val();
+			var li = "<li>  " + val + " </li>";
+			$("ul").append(li);
+		})
+		
+		$("#btn3").click(function(){
+
+			var val = $("#txt").val();
+
+			$("li").each(function(index,element){//element是整个的li，即<li>...</li>
+				// console.log(index);
+				// console.log(element);
+
+
+				if($(element).text() == val){
+
+					$(element).remove();
+
+				}
+			})
+
+		})
+	</script>
+</body>
+</html>

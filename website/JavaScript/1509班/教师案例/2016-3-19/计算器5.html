@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+body {
+font-size:12px;
+color:#555;
+text-align:center;
+background-color:#e2e2e2;
+}
+h6{
+margin:0;
+font-size:1box
+}
+#box {
+width:240px;
+height:auto;
+overflow:hidden;
+margin:10px auto;
+border:#fff 1px solid;
+padding-bottom:10px;
+background-color:#f2f2f2;
+}
+#box div {
+clear:both;
+}
+#box ul{
+padding:0;
+margin:5px 14px;
+border:#fff 1px solid;
+height:auto;
+overflow:hidden
+}
+#box li{
+list-style:none;
+float:left;
+width:32px;
+height:32px;
+margin:5px;
+display:inline;
+line-height:32px;
+font-size:14px;
+background-color:#eaeaea;
+}
+#box li.tool{
+background-color:#e2e2e2;
+}
+#box li:hover{
+background-color:red;
+cursor:pointer;
+}
+#box li:active{
+background-color:blue;
+cursor:pointer;
+}
+#box li.tooldenghao{
+list-style:none;
+float:left;
+width:74px;
+height:32px;
+margin:5px;
+display:inline;
+line-height:32px;
+font-size:14px;
+background-color:#eaeaea
+}
+#box li.tooldenghao:hover{
+background-color:red;
+cursor:pointer;
+}
+#box li.tooldenghao:active{
+background-color:blue;
+cursor:pointer;
+}
+#box li.tool0{
+list-style:none;
+float:left;
+width:74px;
+height:32px;
+margin:5px;
+display:inline;
+line-height:32px;
+font-size:14px;
+background-color:#eaeaea
+}
+#box li.tool0:hover{
+background-color:red;
+cursor:pointer;
+}
+#box li.tool0:active{
+background-color:blue;
+cursor:pointer;
+}
+.shuruxianshi{
+width:200px;
+height:24px;
+line-height:24px;
+padding:4px;
+border:#e6e6e6 1px solid;
+border-bottom:#f2f2f2 1px solid;
+border-right:#f2f2f2 1px solid;
+margin:10px auto;
+direction:ltr;
+text-align:right;
+font-size:16px;
+color:#999;
+}
+</style>
+</head>
+<body>
+	<div id="box">
+		<form name="box" action="" method="get">
+			<div id="box-shuruxianshi">
+			<!--配置显示窗口，使用onfocus="this.blur();"避免键盘输入-->
+				<input type="text" name="numShuruxianshi" class="shuruxianshi" value="0" onfocus="this.blur();" />
+			</div>
+			<div id="box-btn">
+			<ul> <!--配置按钮-->
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li class="tool" onclick="del()">←</li>
+				<li class="tool" onclick="clearscreen()">C</li>
+				<li onclick="command(4)">4</li>
+				<li onclick="command(5)">5</li>
+				<li onclick="command(6)">6</li>
+				<li class="tool" onclick="plus()">+</li>
+				<li class="tool" onclick="minus()">-</li>
+				<li onclick="command(1)">1</li>
+				<li onclick="command(2)">2</li>
+				<li onclick="command(3)">3</li>
+				<li class="tool" onclick="times()">×</li>
+				<li class="tool" onclick="divide()">÷</li>
+				<li class="tool0" onclick="command(0)">0</li>
+				<li onclick="dot()">.</li>
+				<li class="tooldenghao" onclick="equal()">=</li>
+			</ul>
+			</div>
+		</form>
+	</div>
+<script language="javascript" type="text/javascript">
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var obj = {};//
+
+
+
+		var cat={
+			name:"Jerry",
+			color:"#eee",
+			eat:function(){//方法
+				console.log("吃吃！")
+			},
+			sleep:function(){
+				console.log("睡觉")
+			},
+			sayName:function(){
+				console.log(this.name)//this指的是定义的对象cat
+			},
+			beat:function(xxx){
+				// console.log(xxx)
+				return xxx;
+			}
+		};
+
+		cat.eat();//调用方法eat
+		cat.sleep();
+		cat.sayName();
+		// cat.beat("豆豆");
+		var ww = cat.beat("豆豆");
+		console.log(xxx);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			height: 100px;
+			width: 100px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<input type="button" id="btn" value="变色">
+
+
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+	//改变颜色,颜色属于样式css
+	// 	$(".box").css("background-color","red")
+
+	//事件点击改变颜色
+		$("#btn").click(function(){
+			$(".box").css("background-color","red")
+		})
+	
+	</script>
+</body>
+</html>

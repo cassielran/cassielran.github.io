@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<input id="num1" type="text"></input>
+	<input id="num2" type="text"></input>
+	<input id="num3" type="text"></input>
+	<input id="btn" type="button" value="求和"></input>
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+
+
+		$("#btn").click(function(){
+			var str1 = $("#num1").val();
+			var str2 = $("#num2").val();
+			var num1 = Number(str1);
+			var num2 = Number(str2);
+			var num3 = num1 + num2;
+			$("#num3").val(num3);
+		})
+
+		
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉2</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		#list{
+			width: 200px;
+			margin: 0 auto;
+		}
+		.list{
+			list-style: none;
+			float: left;
+			border:1px solid #000;
+			background-color: #eee;
+			width: 60px;
+			height: 30px;
+			cursor:pointer;
+			text-align: center;
+			line-height: 30px;
+		}
+		a{
+			text-decoration: none;
+		}
+		.n-list{
+			background-color: #ee6;
+			list-style: none;
+			display: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li class="list">
+			<a href="#">服装</a>
+			<ul class="n-list">
+				<li>男装</li>
+				<li>女装</li>
+				<li>童装</li>
+			</ul>
+		</li>
+		<li class="list">
+			<a href="#">美妆</a>
+			<ul class="n-list">
+				<li>BB</li>
+				<li>眼影</li>
+				<li>眼线</li>
+				<li>口红</li>
+			</ul>
+		</li>
+		<li class="list">
+			<a href="#">家电</a>
+			<ul class="n-list">
+				<li>空调</li>
+				<li>洗衣机</li>
+				<li>电视</li>
+				<li>电脑</li>
+			</ul>
+		</li>
+	</ul>
+
+
+	<script src="../../script/jquery-1.11.1.js"></script>
+	<script>
+		$(".list").mouseenter(function(){
+			$(this).children(".n-list").stop().slideDown(300);
+		}).mouseleave(function(){
+			$(this).children(".n-list").stop().slideUp(300);
+		})
+	</script>	
+
+</body>
+</html>

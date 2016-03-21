@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加减乘除</title>
+</head>
+<body>
+	<input type="text" id="num1">
+	<input type="text" id="sign">
+	<input type="text" id="num2">
+	<input type="button" id="btn" value="=">
+	<input type="text" id="num3">
+
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#btn").click(function(){
+			var num1 = Number($("#num1").val());
+			var num2 = Number($("#num2").val());
+			var num3 = 0;
+			var sign = $("#sign").val();
+			// if(sign=="+"){
+			// 	num3 = num1+num2 
+			// }else if(sign=="-"){
+			// 	num3=num1-num2
+			// }else if(sign=="*"){
+			// 	num3=num1*num2
+			// }else if(sign=="/"){
+			// 	num3=num1/num2
+			// }
+			switch(sign){
+				case"+":var num3=num1+num2;break;
+				case"-":var num3=num1-num2;break;
+				case"*":var num3=num1*num2;break;
+				case"/":var num3=num1/num2;break;
+			}
+			$("#num3").val(num3);
+		})
+
+	</script>
+</body>
+</html>
