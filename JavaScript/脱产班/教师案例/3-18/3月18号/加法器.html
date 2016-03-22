@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" value="" class="text1">+
+	<input type="text" value="" class="text2">=
+	<input type="text" value="" class="text3">
+	<button>提交</button>
+
+
+
+	<script src="js/jquery-1.11.1.js"></script>
+	<script>
+
+
+
+
+		$("button").click(function(){
+			var x= $(".text1").val();
+			var y= $(".text2").val();
+
+			console.log(x);
+			var num1=Number(x);
+			var num2=Number(y);
+			console.log(num1);
+			console.log(num2);
+			var num3=num1+num2;
+			console.log(num3);
+			$(".text3").val(num3);
+
+		})
+	</script>
+</body>
+</html>

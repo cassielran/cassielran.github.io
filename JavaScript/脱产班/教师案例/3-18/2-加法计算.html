@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>主页</li>
+		<li>电影</li>
+		<li id="test"></li>
+	</ul>
+
+	<input type="text" id="num1"> + <input type="text" id="num2">
+	<input type="text" id="result">
+	<input type="button" id="btn" value="计算">
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#btn").click(function(){
+			var val1 = Number($("#num1").value());
+			var val2 = Number($("#num2").val());
+			var result = val1 + val2;
+			$("#result").val(result);
+		})
+
+
+	</script>
+</body>
+</html>

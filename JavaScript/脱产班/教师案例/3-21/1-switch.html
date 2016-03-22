@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// var num1 = 12;
+		// var num2 = 6;
+		// var sign = "/";
+		// var result = 0;
+		// switch(sign){
+		// 	case "+":result = num1 + num2;break;
+		// 	case "-":result = num1 - num2;break;
+		// 	case "*":result = num1 * num2;break;
+		// 	case "/":result = num1 / num2;break;
+		// }
+		// console.log(result);
+
+		// switch("1"){
+		// 	case "1":console.log(1);
+		// 	case "2":console.log(2);
+		// 	case "3":console.log(3);break;
+		// 	case "4":console.log(4);
+		// }
+
+		function count(num1,num2,sign){
+			var result = 0;
+			switch(sign){
+				case "+":result = num1 + num2;break;
+				case "-":result = num1 - num2;break;
+				case "*":result = num1 * num2;break;
+				case "/":result = num1 / num2;break;
+			}
+			return result;
+		}
+
+		var result = count(3,4,"*");
+		console.log(result);
+
+
+	</script>
+</body>
+</html>

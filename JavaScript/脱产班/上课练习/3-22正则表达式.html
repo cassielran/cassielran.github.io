@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="text" class="txt">
+<input type="text" class="txt2">
+<input type="text" class="txt3">
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		// var reg=/1/;//创建正则表达式是1的变量reg
+		// var str="sajnn12jnjnj";//定义变量str，如果正则表达式中没有规定开头和结尾，只要有1，就是true
+		// var result=reg.test(str);//验证str是否符合正则表达式reg
+		// console.log(result);
+
+		// var reg2=/^1$/;
+		// var str2="sajnn12jnjnj";
+		// var result2=reg2.test(str2);
+		// console.log(result2);
+
+		// $(".txt").blur(function(){//当失去焦点时
+		// 	var reg3=/^4$/;
+		// 	var str3=$(".txt").val();
+		// 	var result3=reg3.test(str3);
+		// 	console.log(result3);
+		// })
+
+		// $(".txt2").blur(function(){//当失去焦点时
+		// 	var reg4=/^[a-zA-Z]{6,10}\@qq\.com$/;
+		// 	var str4=$(".txt2").val();
+		// 	var result4=reg4.test(str4);
+		// 	console.log(result4);
+		// })
+
+		//当失去焦点时
+		// $(".txt3").blur(function(){
+		// 	var reg4=/^[a-zA-Z]{6,10}\@qq\.(com|cn)$/;//"|"或的
+		// 	var str4=$(".txt3").val();
+		// 	var result4=reg4.test(str4);
+		// 	console.log(result4);
+		// })
+
+		//使用exec获取内容与分组
+		var date="2016-3-15";
+		var regDate=/^([0-9]{4})\-([0-9]{1,2})\-([1-9]{1,2})/;
+		var resultDate=regDate.exec(date);
+		console.log(resultDate);//regDate不加括号时，输出["2016-3-15"]
+		//加括号后["2016-3-15","2016","3","15"]
+		var year=resultDate[1];
+		var month=resultDate[2];
+		var day=resultDate[3];
+		console.log("今天是"+year+"年，"+month+"月，"+day+"号")
+	</script>
+</body>
+</html>

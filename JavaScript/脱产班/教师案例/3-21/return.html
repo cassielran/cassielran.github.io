@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="a">
+	<input type="text" class="b">
+	<input type="text" class="c">
+	<input type="text" class="d">
+	<input type="button" class="e"     value="结果">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(".e").click(function(){
+			var x=$(".a").val();
+			var y=$(".b").val();
+			var z=$(".c").val();
+			var m=$(".d").val();
+			var num1=Number(x);
+			var num2=Number(z);
+
+		 function count(mum1,num2,y)
+			var m = 0;
+			switch(y){
+				case "+":m = num1 + num2;break;
+				case "-":m = num1 - num2;break;
+				case "*":m = num1 * num2;break;
+				case "/":m = num1 / num2;break;
+			}
+			return m;
+			var m = count(mum1,num2,y);
+		console.log(m);
+	</script>
+</body>
+</html>

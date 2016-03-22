@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="num1">
+	<input type="text" id="sign">
+	<input type="text" id="num2">
+	<input type="text" id="result">
+	<input type="button" id="btn" value="计算">
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+		$("#btn").click(function(){
+			var num1 = Number($("#num1").val()),
+			num2 = Number($("#num2").val()),
+			sign = $("#sign").val(),
+			result = 0;
+			if(sign == "+"){
+				result = num1 + num2;
+			}else if(sign == "-"){
+				result = num1 - num2;
+			}else if(sign == "*"){
+				result = num1 * num2;
+			}else if(sign == "/"){
+				result = num1 / num2;
+			}else{
+				console.log("请输入正确的操作符")
+			}
+			$("#result").val(result);
+		})
+
+
+
+
+		// var num1 = 10;
+		// var num2 = 30;
+
+		// var sign = "-"
+
+		// if(sign == "+"){
+		// 	var result = num1 + num2;
+		// 	console.log(result);
+		// }
+		// if(sign == "-"){
+		// 	var result = num1 - num2;
+		// 	console.log(result);
+		// }
+
+
+	</script>
+</body>
+</html>
