@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片放大</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		ul li img{
+			width: 300px;
+			height: 200px;
+		}
+		img{
+			width: 500px;
+			height: 300px;
+		}
+		li{
+			float: left;
+			list-style: none;
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+		.addimg{
+			position:absolute;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="../../images/01.jpg" alt=""></li>
+		<li><img src="../../images/02.jpg" alt=""></li>
+		<li><img src="../../images/03.jpg" alt=""></li>
+		<li><img src="../../images/04.jpg" alt=""></li>
+	</ul>
+
+	<script src="../../script/jquery-1.11.1.js"></script>
+	<script>
+		$("li").mouseenter(function(){
+			var src = $(this).find("img").attr("src");
+			//将图片的地址赋值给变量src
+			var newimg = "<img class='addimg' src=' "+ src +" ' alt=''>";
+			//将变量src放入img标签中将获取新的img标签赋值给变量newimg，获得图片
+			$("body").append(newimg);
+			//添加img标签为变量newimg的图片到body中
+		}).mouseleave(function(){
+			$("img").remove(".addimg");
+			//鼠标离开时移除添加的图片
+		}).mousemove(function(event){
+			// $(".addimg").css({"top": (event.pageY) + "px","left": (event.pageX) + "px"});
+			//获取鼠标坐标值赋值给
+			$(".addimg").css({"top": (event.pageY) + "px","right": (event.pageX) + "px"});
+			// $(".addimg").css({"top": (event.pageY+5) + "px","left": (event.pageX+10) + "px"});
+			//鼠标移动，
+		})
+	</script>
+</body>
+</html>

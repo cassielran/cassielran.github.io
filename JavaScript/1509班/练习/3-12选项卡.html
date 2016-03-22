@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box
+		{
+			width: 204px;
+			border: 1px solid black;
+		}
+		li{
+			list-style: none;
+			float: left;
+			width: 50px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			border-left: 1px solid black;
+			border-bottom: 1px solid black;
+			cursor: pointer;
+		}
+		textarea
+		{
+			width: 200px;
+			height: 300px;
+			border: none;
+		}
+		textarea
+		{
+			background-image: url(../../images/1.jpg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>选项1</li>
+			<li>选项2</li>
+			<li>选项3</li>
+			<li>选项4</li>
+			<textarea></textarea>
+			<!-- <input id="color2" type="textarea" placeholder="内容二"> -->
+			<!-- <input id="color3" type="textarea" placeholder="内容三"> -->
+			<!-- <input id="color4" type="textarea" placeholder="内容四"> -->
+		</ul>
+	</div>
+
+
+	<script src="../jquery-1.11.1.js"></script>
+	<script>
+		//选择li标签，点击li
+		$("li").click(function(){
+			//定义变量val，获取所点击的li标签的内容并赋值给变量val
+			var val=$(this).text();
+			//把变量val的内容赋给所选择textarea标签
+			$("textarea").text(val);
+			var index=$(this).index();
+			$("textarea").css("background-image","url(../../images/'"+(index+1)+"'.jpg)")
+		})
+	</script>
+</body>
+</html>

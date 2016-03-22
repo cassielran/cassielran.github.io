@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			width: 100%;
+			height: 100%;
+			background-color: black;
+		}
+		li{
+			list-style-type: none;
+			float: left;
+			width: 70px;
+			height: 50px;
+			background-color: #000080;
+			margin-right: 2px;
+			margin-bottom: 2px;
+		}
+		.box{
+			width: 250px;
+			height: 400px;
+			background-color: #D3D3D3;
+			margin: 0 auto;
+		}
+		.btns{
+			margin-top: 20px;
+			color:white;
+			text-align: center;
+			line-height: 50px;
+			margin-left: 20px;
+		}
+		#txt{
+			margin-top: 20px;
+			margin-left: 40px;
+		}
+		h1{
+			text-align: center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1>科学计算器</h1>
+		<input type="text" id="txt">
+		<ul class="btns">
+			<li class="num">7</li>
+			<li class="num">8</li>
+			<li class="num">9</li>
+			<li class="num">6</li>
+			<li class="num">5</li>
+			<li class="num">4</li>
+			<li class="num">3</li>
+			<li class="num">2</li>
+			<li class="num">1</li>
+			<li class="sign">+</li>
+			<li class="sign">-</li>
+			<li class="sign">*</li>
+			<li class="sign">/</li>
+			<li class="result">=</li>
+			<li>c</li>
+		</ul>
+	</div>
+	<script src="jQuery.js"></script>
+	<script>
+		var num1 ="";
+		var num2 ="";
+		var sign ="";
+		var results = 0;
+		 $(".num").click(function(){
+		 	var num_val = $(this).text();//按钮的值
+		 	if(sign == ""){
+		 		num1 += num_val;
+		 		$("#txt").val(num1);
+		 	}else{
+		 		num2 += num_val;
+		 		$("#txt").val(num2);
+		 	}
+		 });//这里完成了两个相连的数字
+		 $(".sign").click(function(){
+		 	sign = $(this).text();
+		 	console.log(sign);
+		 });
+		 $(".result").click(function(){
+		 	var number1 = Number(num1);
+		 	var number2 = Number(num2);
+		 	switch(sign){
+		 		case "+":results = number1 + number2;
+		 		$("#txt").val(results);
+		 	}
+		 })
+
+	</script>
+</body>
+</html>

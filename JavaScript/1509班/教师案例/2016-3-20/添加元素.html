@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="btn" value="添加">
+	<ul id="list">
+		<li>香蕉</li>
+		<li>苹果</li>
+		<li>鸭梨</li>
+	</ul>
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+		$("#btn").click(function(){
+
+			var result = prompt("添加水果");
+			console.log(result);
+			if(result != null){
+				var li = "<li>" + result + "</li>";
+				$("#list").append(li);
+			}
+		})
+
+	</script>
+</body>
+</html>

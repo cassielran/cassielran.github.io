@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#list li{
+			list-style: none;
+			float: left;
+			height:30px;
+			width:80px;
+			border:1px solid #f00;
+			overflow: hidden;
+		}
+		#list a,#list span{
+			display: block;
+			width:80px;
+			height:30px;
+			text-align: center;
+			line-height: 30px;
+		}
+		#list a{
+			background-color: #ff0;
+		}
+		#list span{
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<ul id="list">
+		<li>
+			<div><span>主页</span><a href="">主页</a></div>
+		</li>
+		<li>
+			<div><span>主页</span><a href="">主页</a></div>
+		</li>
+		<li>
+			<div><span>主页</span><a href="">主页</a></div>
+		</li>
+		<li>
+			<div><span>主页</span><a href="">主页</a></div>
+		</li>
+		<li>
+			<div><span>主页</span><a href="">主页</a></div>
+		</li>
+	</ul>
+
+
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+		$("#list li").mouseenter(function(){
+			$(this).find("div").stop().animate({"margin-top":-30},5000);
+		}).mouseleave(function(){
+			$(this).find("div").stop().animate({"margin-top":0},5000);
+		})
+
+	</script>
+</body>
+</html>

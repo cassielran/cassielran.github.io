@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style>
+		.box{
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input id="txt" type="text">
+		<input class="btn btn1" type="button" value="0">
+		<input class="btn btn1" type="button" value="1">
+		<input class="btn btn1" type="button" value="2">
+		<input class="btn btn1" type="button" value="3">
+		<input class="btn btn1" type="button" value="4">
+		<input class="btn btn1" type="button" value="5">
+		<input class="btn btn1" type="button" value="6">
+		<input class="btn btn1" type="button" value="7">
+		<input class="btn btn1" type="button" value="8">
+		<input class="btn btn1" type="button" value="9"><br>
+		<input class="btn btn2" type="button" value="+">
+		<input class="btn btn2" type="button" value="-">
+		<input class="btn btn2" type="button" value="*">
+		<input class="btn btn2" type="button" value="/">
+		<input class="btn btn3" type="button" value="C">
+		<input class="btn btn4" type="button" value="=">	
+	</div>
+
+
+
+	<script src="../../script/jquery-1.11.1.js"></script>
+	<script>
+		var num = Number($("#btn1").val());
+		var sign = $("#btn2").val();
+		var remove = $("btn3").val();
+		var result = 0;
+
+	</script>
+</body>
+</html>

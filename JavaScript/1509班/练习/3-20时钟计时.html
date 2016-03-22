@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>
+		<span id="hour"></span>时
+		<span id="minu"></span>分
+		<span id="second"></span>秒
+	</p>
+	<p>
+		<span id="hour2"></span>时
+		<span id="minu2"></span>分
+		<span id="second2"></span>秒
+	</p>
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		//练习一，每隔一秒获取一次当前时间	
+		// function setTime(){
+		// 	var date = new Date(); 
+		// 	var hour = date.getHours();
+		// 	var minu = date.getMinutes();
+		// 	var second = date.getSeconds();
+		// 	$("#hour").text(hour);
+		// 	$("#minu").text(minu);
+		// 	$("#second").text(second);
+		// }
+		//setTime();//调用函数
+		// setInterval(setTime,1000);
+
+
+		//练习二，时分秒进位
+		var date = new Date(); 
+		// var hour = date.getHours();
+		// var minu = date.getMinutes();
+		var second = date.getSeconds();
+		// $("#hour2").text(hour);
+		// $("#minu2").text(minu);
+		$("#second2").text(second);
+		function setTime2(){	
+			$("#second2").text(second);
+			second++;
+			if (secoond==9) {
+				minu ++;
+				second = 0;
+				$("#minu2").text(minu);
+				if(minu == 10){
+					hour ++;
+					minu = 0;
+					$("#hour2").text(hour);
+				}
+			}
+		}
+		// setTime2();
+		setInterval(setTime2,1000)
+
+	</script>
+</body>
+</html>

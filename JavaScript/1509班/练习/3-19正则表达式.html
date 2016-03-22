@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	    //{}是位数，[]是范围，()是分组，^是开头，$是结尾
+		// var re = new RegExp;
+		// console.log(re)
+
+		// var re = / /;
+		// console.log(re)
+
+		// var re = /^[0-9]+$/;
+		// var str = "asf@asdf.com";
+		// //var result = re.test(str);//test检索字符串中指定的值。返回 true 或 false。
+		// var result = re.exec(str);//exec检索字符串中指定的值。返回找到的值，并确定其位置。
+		// console.log(result);
+
+		var re = /^[a-z@#]+$/;
+		var str = "asf@#asom";
+		//var result = re.test(str);
+		var result = re.exec(str);
+		console.log(result);
+
+		// var re = /^[a-z]+$/;
+		// var str = "asfasom";
+		// //var result = re.test(str);
+		// var result = re.exec(str);
+		// console.log(result);
+
+
+		// var re = /^([0-9]{4})\-([0-9]{1,2})\-([0-9]{1,2})$/
+		// var str = "2016-3-19";
+		// //var result = re.test(str);
+		// var result = re.exec(str);
+		// var str2 = "今天是" + result[1] + "年," + result[2] + "月," + result[3] + "日";
+		// console.log(str2);
+
+	</script>
+	
+</body>
+</html>

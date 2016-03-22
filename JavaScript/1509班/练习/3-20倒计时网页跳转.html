@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>还有<span></span>秒跳转到百度页面</h3>
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		//方法一
+		// var second=5;
+		// $("span").text(second);
+		// var t = setInterval(setTime,1000);
+		// function setTime(){
+		// 	$("span").text(second);
+		// 	second--;	
+		// }
+		// var w = setTimeout(function()
+		// {window.location.href = "http://baidu.com"},5000)
+
+		//方法二
+		var second=5;
+		$("span").text(second);//给span一个初始值5
+		function setTime(){//声明一个函数setTime
+			$("span").text(second);
+			second--;
+			if (second == 0) {
+				location.href = "http://baidu.com"
+			}		
+		}
+		setInterval(setTime,1000);
+		
+	</script>
+</body>
+</html>

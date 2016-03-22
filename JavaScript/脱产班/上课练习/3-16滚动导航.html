@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		ul{
+			height: 40px;
+		}
+		li{
+			list-style: none;
+			cursor:pointer;
+			border:1px solid red;
+			width: 60px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			overflow: hidden;
+		}
+		span,a{
+			display:block;
+			width: 60px;
+			height: 40px;
+		}
+		span{
+			background-color: yellow;
+		}
+		a{
+			background-color: green;
+		}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<div>
+				<span>经济</span>
+				<a href="">经济</a>	
+			</div>
+		</li>
+	</ul>
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("div").mouseenter(function(){
+			$(this).stop().animate({"margin-top":-40},500);
+		}).mouseleave(function(){
+			$(this).stop().animate({"margin-top":0},500);
+		})
+	</script>
+</body>
+</html>

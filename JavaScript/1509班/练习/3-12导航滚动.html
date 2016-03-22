@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		.view
+		{
+			width: 303px;
+			height: 60px;
+			overflow: hidden;
+			border:1px solid black;
+		}
+		ul
+		{
+			float: left;
+		}
+		.top
+		{
+			list-style: none;	
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background-color: #ff0;
+			cursor: pointer;
+			border-left:1px solid black;
+		}
+		.bottom
+		{	
+			list-style: none;	
+			width: 100px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background-color: #0ff;
+			cursor: pointer;
+			border-left:1px solid black;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="view">
+		<ul>
+			<li class="top">衣服</li>
+			<li class="bottom">衣服</li>
+		</ul>
+		<ul>
+			<li class="top">饰品</li>
+			<li class="bottom">饰品</li>
+		</ul>
+		<ul>
+			<li class="top">鞋子</li>
+			<li class="bottom">鞋子</li>
+		</ul>
+	</div>
+
+	<script src="../../script/jquery-1.11.1.js"></script>
+	<script>
+		$("ul").mouseenter(function(){ 
+			$(this).stop().animate({"margin-top":"-60"},300);
+		}).mouseleave(function(){ 
+			$(this).stop().animate({"margin-top":"0px"},300);
+		})
+	</script>
+</body>
+</html>

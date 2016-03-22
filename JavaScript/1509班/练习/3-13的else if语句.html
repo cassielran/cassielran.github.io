@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input id="txt" type="text">
+	<input id="btn" type="button" value="测验">
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("#btn").click(function(){
+			var val = Number($("#txt").val());
+			if(val>=1 && val<=10){
+				alert("数字介于1-10");
+			}else if(val>10 && val<=20) {
+				alert("11-19");
+			}else if(val>20 && val<=30){
+				alert("21-30");
+			} else if(val>30 && val<=40){
+				alert("31-40");
+			}else if(val>40 && val<=50){
+				alert("41-50");
+			}
+		})
+
+		// $("#btn").click(function(){
+		// 	var val = Number($("#txt").val());
+		// 	if(val>=1 && val<=10){
+		// 		alert("数字介于1-10");
+		// 	}
+		// 	if(val>0){
+		// 		alert("数字大于0")
+		// 	}
+		// 	if(val>10 && val<=20){
+		// 		alert("数字介于11-20");
+		// 	}
+		// 	if(val>20 && val<=30){
+		// 		alert("21-30");
+		// 	}
+		// })
+	</script>
+</body>
+</html>

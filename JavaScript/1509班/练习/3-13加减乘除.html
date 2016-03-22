@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input id="num1" type="text">
+	<input id="sign" type="text">
+	<input id="num2" type="text">
+	<br><br>=
+	<input id="result" type="text">
+	<input id="btn" type="button" value="计算">
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("#btn").click(function(){
+			var num1 = Number($("#num1").val());
+			var num2 = Number($("#num2").val());
+			var sign = $("#sign").val();
+			var result = 0;
+			if(sign == "+"){
+				result = num1 + num2;
+				$("#result").val(result);
+			}
+			if(sign == "-"){
+				return($("#result").val(num1 - num2));	
+			}
+			if(sign == "*"){
+				return($("#result").val(num1 * num2));	
+			}
+			if(sign == "/"){
+				return($("#result").val(num1 / num2));	
+			}
+		})
+
+		// $("#btn").click(function(){
+		// 	var num1 = Number($("#num1").val());
+		// 	var num2 = Number($("#num2").val());
+		// 	var sign = $("#sign").val();
+		// 	var result = 0;
+		// 	switch(sign){
+		// 		case "+" : result = num1 + num2;break;
+		// 		case "-" : result = num1 - num2;break;
+		// 		case "*" : result = num1 * num2;break;
+		// 		case "/" : result = num1 / num2;break;
+		// 	}
+		// 	$("#result").val(result);
+		// })
+
+	</script>
+</body>
+</html>

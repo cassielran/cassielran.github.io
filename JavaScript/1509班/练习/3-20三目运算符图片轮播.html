@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		.view{
+			width: 200px;
+			height: 150px;
+			overflow: hidden;
+		}
+		.box{
+				width: 800px;
+				height: 150px;
+			}
+		img{
+			width: 200px;
+			height: 150px;
+			float: left;
+		}
+		ul{
+			position: relative;
+			top:-30px;
+			left: 90px;
+		}
+		li{
+			float: left;
+			list-style: none;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			background-color: #ede;
+			margin-left: 5px;
+			cursor:pointer;
+		}
+		.color{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="view">
+		<div class="box">
+			<img src="../images/1.jpg" alt="">
+			<img src="../images/2.jpg" alt="">
+			<img src="../images/3.jpg" alt="">
+			<img src="../images/4.jpg" alt="">
+		</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("li").click(function(){
+			$(this).addClass("color").siblings().removeClass("color");
+			var index = $(this).index();
+			var marle = index * -200;
+			$(".box").animate({"margin-left":marle},300);
+		})
+		function ani(){
+			var num = 0;
+			$(".box").animate({"margin-left":marle},300);
+			index++;
+		}
+		setInterval(ani,500)
+
+	</script>
+</body>
+</html>

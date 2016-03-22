@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片轮播</title>
+	<style>
+		*{padding: 0;margin: 0;}
+	.box
+		{
+			width: 400px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+	.b-img
+		{
+			width: 1600px;
+		}
+	img
+	{
+		width: 400px;
+		height: 200px;
+		float: left;
+	}
+	ul
+	{
+		position: relative;
+		top: -30px;
+		left: 260px;
+		cursor: pointer;
+	}
+	li
+	{	
+		list-style: none;
+		float: left;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		background-color: #fff;
+		margin-left: 2px;
+	}
+	.color
+		{
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="b-img">
+			<img src="../../images/01.jpg" alt="">
+			<img src="../../images/02.jpg" alt="">
+			<img src="../../images/03.jpg" alt="">
+			<img src="../../images/04.jpg" alt="">
+		</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+
+
+	<script src="../../script/jquery-1.11.1.js"></script>
+	<script>
+		$("li").click(function(){
+			var index = $(this).index();
+			var malf = index * -400;
+			$(".b-img").animate({"margin-left":malf},300);
+			$(this).addClass("color");
+			$(this).siblings().removeClass("color");
+		})
+		// $(".box").click(function(){
+		// 	$(".b-img").animate({"margin-left":"-1200px"},3000);
+		
+		// })
+	</script>
+</body>
+</html>

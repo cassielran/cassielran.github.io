@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" id="btn" value="添加元素">
+	<ul>
+		<li>书包</li>
+		<li>铅笔</li>
+		<li>课本</li>
+	</ul>
+
+	<script src="jquery-1.11.1.js"></script>
+	<script>
+		$("#btn").click(function(){
+			var val = $("#txt").val();
+			// console.log(val)
+			$("#txt").append( "<li>" + val +"</li>");
+		})
+	</script>
+</body>
+</html>

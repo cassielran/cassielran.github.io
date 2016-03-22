@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		<span id="hours"></span>:
+		<span id="minutes"></span>:
+		<span id="seconds"></span>
+<!-- 	<input type="text"> -->
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		// function setTime(){
+		// 	var timeNow = new Date();
+		// 	var h = timeNow.getHours();
+		// 	var m = timeNow.getMinutes();
+		// 	var s = timeNow.getSeconds();
+		// 	// $("#hours").text(h);
+		// 	// $("#minutes").text(m);
+		// 	// $("#seconds").text(s);
+		// 	var time = h + ":" + m + ":" + s;
+		// 	$("input").val(time);
+		// }
+		// setTime();
+		// setInterval(setTime,1000);
+
+		var minutes = 0;
+		var seconds = 0;
+		function setNum(){
+			$("#seconds").text(seconds);
+			$("#minutes").text(minutes);
+			seconds++
+			if(seconds == 10){
+				seconds = 0;
+				minutes++;
+			}
+		}
+		setNum();
+		setInterval(setNum,1000);
+
+	</script>
+</body>
+</html>

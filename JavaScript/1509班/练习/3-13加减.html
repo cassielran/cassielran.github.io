@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加减</title>
+</head>
+<body>
+	<input id="try" type="number" value="1"><p></p><p></p>
+
+	<input id="num" type="text" value=1>
+	<input id="add" type="button" value="+">
+	<input id="sub" type="button" value="-">
+
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("#try").click(function(){
+			var _val = Number($("#try").val());
+			if(_val>0){
+				$("#try").val();	
+			}else{
+				// alert("必须大于0");
+				return($("#try").val(value=1));
+			}
+		})
+
+
+
+
+		$("#add").click(function(){
+			var val = Number($("#num").val());
+			var num = val+1;
+			$("#num").val(num);
+		})
+		$("#sub").click(function(){
+			var val = Number($("#num").val());
+			var num = val-1;
+			// if(num<1){
+			// 	alert("不能小于1");
+			// }else{
+			// 	$("#num").val(num);
+			// }
+			if(num>=1){
+				$("#num").val(num);
+			}else{
+				alert("不能小于1");
+			}
+		})
+
+
+
+		
+	</script>
+</body>
+</html>

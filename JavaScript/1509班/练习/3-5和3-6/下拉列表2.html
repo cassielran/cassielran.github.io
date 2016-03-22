@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		.box1
+			{
+  				width: 60px;
+  				height: 30px;
+  				text-align:center;
+  				line-height: 30px;
+  				border:1px solid ;
+  				background-color: #ee6;
+  				cursor:pointer;
+			}
+		.box1 li
+			{	
+				list-style: none;
+				float: left;
+				background-color: #ee6;
+				width: 60px;
+  				height: 30px;
+  				text-align:center;
+  				line-height: 30px;
+  				border:1px solid ;
+  				display:none;  
+			}
+	</style>
+</head>
+<body>
+	<div class="box1">语言
+  		<ul>
+    		<li>1</li>
+    		<li>11</li>
+    		<li>111</li>
+  		</ul>
+	</div>
+	<div class="box1">类别
+  		<ul>
+    		<li>2</li>
+    		<li>22</li>
+    		<li>222</li>
+  		</ul>
+	</div>
+	<div class="box1">大小
+  		<ul>
+    		<li>3</li>
+    		<li>33</li>
+    		<li>333</li>
+  		</ul>
+	</div>
+
+
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(.box1).click(function(){
+			$(.box1 li).css("")
+		})
+	</script>
+	
+</body>
+</html>

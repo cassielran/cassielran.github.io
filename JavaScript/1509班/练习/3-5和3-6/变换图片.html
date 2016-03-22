@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.clearfix: before
+	.clearfix: afeter{diasplay: table;content: "";}
+	.clearfix: after{clear: both;}
+	.clearfix {zoom:1;}
+		ul li{	
+			float: left;
+			height: 20px;
+			width: 20px;
+			border:1px solid red;
+			text-align: center;
+			line-height: 20px;
+			list-style-type: none;
+			cursor:pointer;
+		}
+		
+	</style>
+</head>
+<body>
+	<img class="pic" src="../../images/1.jpg" alt="">
+	<ul class="list .clearfix">
+		<li class="list1">1</li>
+		<li class="list2">2</li>
+		<li class="list3">3</li>
+		<li class="list4">4</li>
+	</ul>
+
+
+	<script type="text/javascript" src="../../script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(".list1").click(function(){
+			$(".pic").attr("src","../../images/1.jpg");
+			$(".list1").css("background","red");
+			$(".list2,.list3,.list4").css("background","#fff");
+		})
+		$(".list2").click(function(){
+			$(".pic").attr("src","../../images/2.jpg");
+			$(".list2").css("background","red");
+			$(".list1,.list3,.list4").css("background","#fff");
+		})
+		$(".list3").click(function(){
+			$(".pic").attr("src","../../images/3.jpg");
+			$(".list3").css("background","red");
+			$(".list1,.list2,.list4").css("background","#fff")
+		})
+		$(".list4").click(function(){
+			$(".pic").attr("src","../../images/4.jpg");
+			$(".list4").css("background","red");
+			$(".list1,.list2,.list3").css("background","#fff");
+		})
+	</script>
+
+</body>
+</html>

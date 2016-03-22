@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xiala</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		ul{
+			list-style: none;
+			background-color: #ff6;
+			width: 60px;
+			height: 40px;
+			border:1px solid black;
+			text-align: center;
+			line-height: 40px;
+			float: left;
+			cursor:pointer;
+		}
+		a{
+			display: none;
+			background-color: #f78;
+			text-decoration: none;
+			width: 60px;
+			height: 60px;
+		}
+	</style>
+</head>
+<body>
+	<h1>一般li中不直接加内容，当作容器来用</h1>
+
+	<ul>
+		<li>游戏</li>
+		<a href="">11</a>
+		<a href="">22</a>
+		<a href="">33</a>
+	</ul>
+	<ul>
+		<li>游戏</li>
+		<a href="">11</a>
+		<a href="">22</a>
+		<a href="">33</a>
+	</ul>
+	<ul>
+		<li>游戏</li>
+		<a href="">11</a>
+		<a href="">22</a>
+		<a href="">33</a>
+	</ul>
+	<script src="../script/jquery-1.11.1.js"></script>
+	<script>
+		$("ul").mouseenter(function(){
+			$(this).children("a").stop().slideDown(100);
+		}).mouseleave(function(){
+			$(this).children("a").stop().slideUp(100);
+		})
+
+	</script>
+</body>
+</html>

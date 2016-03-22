@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单</title>
+	<style>	
+		*{margin: 0;padding: 0;}
+		ul{float: left;}
+		a
+		{
+			text-decoration: none;
+			border:1px solid #000;
+			display: block;
+			width: 60px;
+			height: 30px;
+			background-color: #eee;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+		}
+		li
+		{
+			list-style: none;
+			display: none;
+			width: 60px;
+			height: 30px;
+			background-color: #ee6;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="b-box"> -->
+		<!-- <div class="box box1"> -->
+			<ul>
+				<a href="#">服装</a>
+				<li>男装</li>
+				<li>女装</li>
+				<li>童装</li>
+			</ul>
+		<!-- </div> -->
+		<!-- <div class="box box2"> -->
+			<ul>
+				<a href="#">美妆</a>
+				<li>BB</li>
+				<li>眼影</li>
+				<li>眼线</li>
+				<li>口红</li>
+			</ul>
+		<!-- </div> -->
+		<!-- <div class="box box3"> -->
+			<ul>
+				<a href="#">家电</a>
+				<li>空调</li>
+				<li>洗衣机</li>
+				<li>电视</li>
+				<li>电脑</li>
+			</ul>
+		<!-- </div> -->
+	<!-- </div> -->
+		
+
+	<script src="../../script/jquery-1.11.1.js"></script>
+	<script>
+		// $("ul").click(function(){
+		// 	$(this).find("li").slideDown(200);//点击ul后到找子级li并下拉
+		// }).mouseleave(function(){
+		// 	$(this).find("li").slideUp(300);//鼠标离开ul后找到子级li上卷
+		// })
+		$("ul").click(function(){
+			$(this).children("li").slideDown(200);
+		}).mouseleave(function(){
+			$(this).children("li").slideUp(300);
+		})
+	</script>
+</body>
+</html>
