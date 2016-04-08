@@ -20,7 +20,12 @@
 	<link rel="stylesheet" type="text/css" href="css/flexslider.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/animate.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
-
+	<style>
+		.container img{
+			width: 300px;
+			height: 200px;
+		}
+	</style>
 </head>
 <body>
 
@@ -93,6 +98,7 @@
 			<section class="comming-soon-section">
 				<div class="comming-soon-content">
 					<div class="container">
+						<img src="images/many.jpg" alt="">
 						<h1>site is coming soon</h1>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
 						<div id="clock">
@@ -148,6 +154,14 @@
 	<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/waypoint.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/blowup.js"></script>
+	<script>
+		$("img").mouseenter(function () {
+			$(this).blowup({
+			});
+
+		})
+	</script>
 
 </body>
 </html>
