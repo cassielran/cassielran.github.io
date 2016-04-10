@@ -156,8 +156,12 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="js/blowup.js"></script>
 	<script>
-		$("img").mouseenter(function () {
-			$(this).blowup({
+		$(document).ready(function () {
+			$("img").blowup({
+				"background":"#ccc",
+				"width":300,
+				"height":300,
+				"cursor":false
 			});
 
 		})
